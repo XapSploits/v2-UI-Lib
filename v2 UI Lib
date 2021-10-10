@@ -611,7 +611,6 @@ function Kavo.CreateLib(kavName, themeList)
                 viewInfo.Position = UDim2.new(0.930000007, 0, 0.151999995, 0)
                 viewInfo.Size = UDim2.new(0, 23, 0, 23)
                 viewInfo.ZIndex = 2
-                viewInfo.Image = "rbxassetid://3926305904"
                 viewInfo.ImageColor3 = themeList.SchemeColor
                 Objects[viewInfo] = "ImageColor3"
                 viewInfo.ImageRectOffset = Vector2.new(764, 764)
@@ -737,19 +736,6 @@ function Kavo.CreateLib(kavName, themeList)
                 viewInfo.MouseButton1Click:Connect(function()
                     if not viewDe then
                         viewDe = true
-                        focusing = true
-                        for i,v in next, infoContainer:GetChildren() do
-                            if v ~= moreInfo then
-                                Utility:TweenObject(v, {Position = UDim2.new(0,0,2,0)}, 0.2)
-                            end
-                        end
-                        Utility:TweenObject(moreInfo, {Position = UDim2.new(0,0,0,0)}, 0.2)
-                        Utility:TweenObject(blurFrame, {BackgroundTransparency = 0.5}, 0.2)
-                        Utility:TweenObject(btn, {BackgroundColor3 = themeList.ElementColor}, 0.2)
-                        wait(1.5)
-                        focusing = false
-                        Utility:TweenObject(moreInfo, {Position = UDim2.new(0,0,2,0)}, 0.2)
-                        Utility:TweenObject(blurFrame, {BackgroundTransparency = 1}, 0.2)
                         wait(0)
                         viewDe = false
                     end
